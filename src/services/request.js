@@ -4,8 +4,8 @@ export const getTracks = () => {
   return axios.get("/tracks/uz/");
 };
 
-export const getTracksHome = () => {
-  return axios.get("/top/home/");
+export const getTracksHome = (url = "/top/home/") => {
+  return axios.get(url);
 };
 
 export const getTrack = (trackId) => {
