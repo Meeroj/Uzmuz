@@ -31,7 +31,7 @@ function App() {
 
   return (
   <div className="flex">
-    <SideBar setUrl={setUrl} setSubUrl={setSubUrl}/>
+    <SideBar setUrl={setUrl} setSubUrl={setSubUrl} url={url}/>
     <Home music={music} selectedTrack={selectedTrack} handleTrackSelect={handleTrackSelect}/>
   </div>
   );
