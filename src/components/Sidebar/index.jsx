@@ -1,8 +1,12 @@
 import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import { useDispatch } from 'react-redux';
+import { setPage } from '../../redux/reducer/music.reducer';
 
 const SideBar = ({setUrl,url, setSubUrl}) => {
+  const dispatch= useDispatch()
+  const handleSetUrl=(url, subUrl, pageName)=>{setUrl(url), setSubUrl(subUrl), dispatch(setPage(pageName))}
   return (
     <div className='flex flex-col fixed h-[100vh] ms-2'>
       <div className='flex flex-col w-[22vw] h-[50vh] p-2 mt-2 rounded-xl sidebar'>

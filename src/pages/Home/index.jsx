@@ -1,12 +1,12 @@
 import MusicList from '../../components/MusicList';
 import Player from '../../components/Player';
 
-const Home = ({music, handleTrackSelect, selectedTrack,}) => {
+const Home = ({music, handleTrackSelect, selectedTrack, isLoading}) => {
 
   return (
     <div>
       <div>
-        <MusicList tracks={music} onTrackSelect={handleTrackSelect} selectedTrack={selectedTrack}/>
+        <MusicList tracks={music} onTrackSelect={handleTrackSelect} selectedTrack={selectedTrack} isLoading={isLoading}/>
         {selectedTrack&&
           <Player
           src={selectedTrack?.ringtone}
